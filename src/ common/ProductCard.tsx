@@ -1,4 +1,4 @@
-import { Box, Typography, Button, Card, CardActions, Chip, Rating } from "@mui/material"
+import { Box, Typography, Button, Card, CardActions, Rating } from "@mui/material"
 import { ShoppingCart } from "lucide-react"
 import type { Product } from "../types/product"
 
@@ -31,13 +31,10 @@ const ProductCard = ({ product }: Props) => {
           mb: 2,
         }}
       />
-      {product.badge && (
-        <Chip label={product.badge} color="primary" size="small" sx={{ mb: 1, fontWeight: "bold" }} />
-      )}
-      <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
+      <Typography variant="subtitle1" fontWeight="bold" sx={{ mb: 0.5 }}>
         {product.name}
       </Typography>
-      <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
+      <Typography variant="body1" fontWeight="bold" sx={{ mb: 0.5 }}>
         €{product.price}
       </Typography>
       <Box display="flex" alignItems="center" gap={0.5} mb={1}>
@@ -46,7 +43,7 @@ const ProductCard = ({ product }: Props) => {
           ({product.reviews} reviews)
         </Typography>
       </Box>
-      <CardActions sx={{ mt: "auto" }}>
+      <CardActions sx={{ mt: "auto", p: 0 }}>
         <Button
           variant="contained"
           fullWidth
@@ -55,6 +52,8 @@ const ProductCard = ({ product }: Props) => {
             backgroundColor: "#8C471F",
             "&:hover": { backgroundColor: "#6B2802" },
             fontWeight: "bold",
+            textTransform: "none",
+            py: 1.2,
           }}
         >
           Add to Cart
