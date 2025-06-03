@@ -1,5 +1,3 @@
-// src/pages/Home.tsx
-
 import HeroSection from "../sections/HeroSection"
 import CategoriesSection from "../sections/CategoriesSection"
 import ProductsSection from "../sections/ProductsSection"

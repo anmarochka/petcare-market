@@ -3,14 +3,24 @@
   font-size: 16px;
 }
 
-body {
+html, body {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  height: 100%;
   background-color: #fff;
   color: #333;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

@@ -1,38 +1,44 @@
-import { Box, Container, Typography, IconButton } from "@mui/material"
-import { Facebook, Twitter, Instagram, YouTube, LinkedIn } from "@mui/icons-material"
+import { Box, Container, Typography, IconButton } from "@mui/material";
+import { Facebook, Twitter, Instagram, YouTube, LinkedIn } from "@mui/icons-material";
 
 const Footer = () => {
   return (
-    <Box sx={{ bgcolor: "#8C471F", color: "#F5E7D5", py: 4, mt: 8 }}>
-      <Container>
-        <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4, justifyContent: "space-between" }}>
-          <Box sx={{ flex: "1 1 250px" }}>
+    <Box sx={{ bgcolor: "#D5B7A5", color: "#6B2802", py: 4, mt: 8 }}>
+      <Container maxWidth={false} disableGutters sx={{ px: { xs: 4, md: 8 } }}>
+        <Box sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "space-between",
+          gap: { xs: 2, md: 6 },
+        }}>
+          <Box sx={{ minWidth: 200, flex: "1 1 250px" }}>
             <Typography variant="h6" fontWeight="bold" gutterBottom>
               PetCare Market
             </Typography>
-            <Typography variant="body2">
-              Making pet care products shopping meaningful by supporting animal shelters with every purchase.
-            </Typography>
+            <Typography variant="body2" sx={{ fontSize: "0.875rem" }}>
+  Making pet care products shopping meaningful by supporting animal shelters with every purchase.
+</Typography>
+
             <Box sx={{ mt: 2, display: "flex", gap: 1 }}>
-              <IconButton size="small" sx={{ color: "#F5E7D5" }}>
+              <IconButton size="small" sx={{ color: "#6B2802" }}>
                 <Facebook />
               </IconButton>
-              <IconButton size="small" sx={{ color: "#F5E7D5" }}>
+              <IconButton size="small" sx={{ color: "#6B2802" }}>
                 <Twitter />
               </IconButton>
-              <IconButton size="small" sx={{ color: "#F5E7D5" }}>
+              <IconButton size="small" sx={{ color: "#6B2802" }}>
                 <Instagram />
               </IconButton>
-              <IconButton size="small" sx={{ color: "#F5E7D5" }}>
+              <IconButton size="small" sx={{ color: "#6B2802" }}>
                 <YouTube />
               </IconButton>
-              <IconButton size="small" sx={{ color: "#F5E7D5" }}>
+              <IconButton size="small" sx={{ color: "#6B2802" }}>
                 <LinkedIn />
               </IconButton>
             </Box>
           </Box>
 
-          <Box sx={{ flex: "1 1 150px" }}>
+          <Box sx={{ minWidth: 150 }}>
             <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
               Shop
             </Typography>
@@ -44,7 +50,7 @@ const Footer = () => {
             <Typography variant="body2">Reptile Products</Typography>
           </Box>
 
-          <Box sx={{ flex: "1 1 150px" }}>
+          <Box sx={{ minWidth: 150 }}>
             <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
               About Us
             </Typography>
@@ -52,7 +58,7 @@ const Footer = () => {
             <Typography variant="body2">Partner Shelters</Typography>
           </Box>
 
-          <Box sx={{ flex: "1 1 200px" }}>
+          <Box sx={{ minWidth: 200 }}>
             <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
               Customer Service
             </Typography>
@@ -69,7 +75,7 @@ const Footer = () => {
         </Typography>
       </Container>
     </Box>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

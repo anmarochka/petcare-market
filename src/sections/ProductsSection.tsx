@@ -1,6 +1,6 @@
-import { Box, Container, Typography, Button, Stack } from "@mui/material"
-import ProductCard from "../ common/ProductCard"
-import products from "../data/products"
+import { Box, Container, Typography, Button, Grid } from "@mui/material";
+import ProductCard from "../ common/ProductCard";
+import products from "../data/products";
 
 const ProductsSection = () => {
   return (
@@ -18,18 +18,13 @@ const ProductsSection = () => {
           Most loved products by pet parents like you
         </Typography>
 
-        <Stack
-          direction="row"
-          flexWrap="wrap"
-          justifyContent="center"
-          spacing={3}
-        >
+        <Grid container spacing={{ xs: 2, sm: 3, md: 4 }} justifyContent="center">
           {products.map((product) => (
-            <Box key={product.id} sx={{ flex: "1 1 250px", maxWidth: 300 }}>
+            <Grid item key={product.id} xs={12} sm={6} md={3}>
               <ProductCard product={product} />
-            </Box>
+            </Grid>
           ))}
-        </Stack>
+        </Grid>
 
         <Box textAlign="center" mt={4}>
           <Button
@@ -49,7 +44,7 @@ const ProductsSection = () => {
         </Box>
       </Container>
     </Box>
-  )
-}
+  );
+};
 
-export default ProductsSection
+export default ProductsSection;

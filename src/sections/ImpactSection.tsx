@@ -1,28 +1,29 @@
-import { Box, Button, Container, Stack, Typography } from "@mui/material"
-import { Heart, Home } from "lucide-react"
+import { Box, Button, Stack, Typography, Container } from "@mui/material";
+import { Heart, Home } from "lucide-react";
 
 const ImpactSection = () => (
-  <Box sx={{ py: 8, backgroundColor: "#D5B7A5" }}>
-    <Container>
+  <Box sx={{ backgroundColor: "#D5B7A5" }}>
+    <Container disableGutters maxWidth={false}>
       <Stack
         direction={{ xs: "column", md: "row" }}
         spacing={4}
         alignItems="center"
-        justifyContent="center"
+        justifyContent="space-between"
       >
+
         <Box
           component="img"
           src="/assets/impact.jpg"
           alt="Helping animals"
           sx={{
             width: { xs: "100%", md: "50%" },
-            maxWidth: 600,
-            borderRadius: 2,
+            height: { xs: 250, md: "100%" },
             objectFit: "cover",
+            flexShrink: 0,
           }}
         />
 
-        <Box sx={{ maxWidth: 500 }}>
+        <Box sx={{ flex: 1, maxWidth: 700, px: { xs: 2, md: 4 } }}>
           <Typography variant="h4" fontWeight="bold" color="#6B2802" gutterBottom>
             Your Purchase = Real help
           </Typography>
@@ -96,6 +97,6 @@ const ImpactSection = () => (
       </Stack>
     </Container>
   </Box>
-)
+);
 
-export default ImpactSection
+export default ImpactSection;
