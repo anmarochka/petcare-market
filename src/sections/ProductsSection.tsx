@@ -1,4 +1,4 @@
-import { Box, Container, Typography, Button, Grid } from "@mui/material";
+import { Box, Button, Container, Typography } from "@mui/material";
 import ProductCard from "../ common/ProductCard";
 import products from "../data/products";
 
@@ -18,13 +18,26 @@ const ProductsSection = () => {
           Most loved products by pet parents like you
         </Typography>
 
-        <Grid container spacing={{ xs: 2, sm: 3, md: 4 }} justifyContent="center">
-          {products.map((product) => (
-            <Grid item key={product.id} xs={12} sm={6} md={3}>
+        <Box
+          sx={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            gap: 4,
+          }}
+        >
+          {products.map((product, index) => (
+            <Box
+              key={index}
+              sx={{
+                flex: "1 1 250px", // базовая ширина карточки
+                maxWidth: 300,
+              }}
+            >
               <ProductCard product={product} />
-            </Grid>
+            </Box>
           ))}
-        </Grid>
+        </Box>
 
         <Box textAlign="center" mt={4}>
           <Button
@@ -36,7 +49,6 @@ const ProductsSection = () => {
               textTransform: "none",
               px: 4,
               py: 1.5,
-              mt: 4,
             }}
           >
             View all products
