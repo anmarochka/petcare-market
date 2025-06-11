@@ -16,7 +16,7 @@ const Footer = () => {
               PetCare Market
             </Typography>
             <Typography variant="body2" sx={{ fontSize: "0.875rem" }}>
-  Making pet care products shopping meaningful by supporting animal shelters with every purchase.
+  Making pet care products shopping meaningful by supporting animal shelters with every purchase
 </Typography>
 
             <Box sx={{ mt: 2, display: "flex", gap: 1 }}>
@@ -71,7 +71,7 @@ const Footer = () => {
         </Box>
 
         <Typography variant="body2" align="center" sx={{ mt: 4 }}>
-          © 2025 PetCare Market. All rights reserved.
+          © 2025 PetCare Market. All rights reserved
         </Typography>
       </Container>
     </Box>

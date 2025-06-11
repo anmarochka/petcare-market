@@ -3,6 +3,7 @@ import Header from "./layout/Header"
 import Footer from "./layout/Footer"
 import Home from "./pages/Home"
 import Box from "@mui/material/Box"
+import Shop from "./pages/Shop"
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Box component="main" sx={{ flex: 1 }}>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/shop" element={<Shop />} />
           </Routes>
         </Box>
         <Footer />
